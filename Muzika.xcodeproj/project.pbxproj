@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61300FF525666EAC00E9AE80 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61300FF425666EAC00E9AE80 /* ProfileViewController.swift */; };
+		61300FFA25666EF300E9AE80 /* FeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61300FF925666EF300E9AE80 /* FeaturedViewController.swift */; };
 		61DF2F6D256554920071EFF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DF2F6C256554920071EFF2 /* AppDelegate.swift */; };
-		61DF2F6F256554920071EFF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DF2F6E256554920071EFF2 /* ViewController.swift */; };
+		61DF2F6F256554920071EFF2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DF2F6E256554920071EFF2 /* HomeViewController.swift */; };
 		61DF2F72256554930071EFF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61DF2F70256554930071EFF2 /* Main.storyboard */; };
 		61DF2F75256554930071EFF2 /* Muzika.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 61DF2F73256554930071EFF2 /* Muzika.xcdatamodeld */; };
 		61DF2F77256554940071EFF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61DF2F76256554940071EFF2 /* Assets.xcassets */; };
@@ -35,9 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		61300FF425666EAC00E9AE80 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		61300FF925666EF300E9AE80 /* FeaturedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedViewController.swift; sourceTree = "<group>"; };
 		61DF2F69256554920071EFF2 /* Muzika.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Muzika.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61DF2F6C256554920071EFF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		61DF2F6E256554920071EFF2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		61DF2F6E256554920071EFF2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		61DF2F71256554930071EFF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		61DF2F74256554930071EFF2 /* Muzika.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Muzika.xcdatamodel; sourceTree = "<group>"; };
 		61DF2F76256554940071EFF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,8 +104,10 @@
 			isa = PBXGroup;
 			children = (
 				61DF2F6C256554920071EFF2 /* AppDelegate.swift */,
-				61DF2F6E256554920071EFF2 /* ViewController.swift */,
 				61DF2F70256554930071EFF2 /* Main.storyboard */,
+				61300FF925666EF300E9AE80 /* FeaturedViewController.swift */,
+				61DF2F6E256554920071EFF2 /* HomeViewController.swift */,
+				61300FF425666EAC00E9AE80 /* ProfileViewController.swift */,
 				61DF2F76256554940071EFF2 /* Assets.xcassets */,
 				61DF2F78256554940071EFF2 /* LaunchScreen.storyboard */,
 				61DF2F7B256554940071EFF2 /* Info.plist */,
@@ -260,7 +266,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				61DF2F75256554930071EFF2 /* Muzika.xcdatamodeld in Sources */,
-				61DF2F6F256554920071EFF2 /* ViewController.swift in Sources */,
+				61DF2F6F256554920071EFF2 /* HomeViewController.swift in Sources */,
+				61300FF525666EAC00E9AE80 /* ProfileViewController.swift in Sources */,
+				61300FFA25666EF300E9AE80 /* FeaturedViewController.swift in Sources */,
 				61DF2F6D256554920071EFF2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

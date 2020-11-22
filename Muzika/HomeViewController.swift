@@ -25,7 +25,7 @@ class HomeViewController: UIViewController , UIScrollViewDelegate  {
     
     var images: [String] = ["Lofi","Beatles","Alan Watts"]
     var frame = CGRect(x: 0, y: 0, width: 0, height: 0)
-    
+    let cellSpacingHeight: CGFloat = 5
     
     
     override func viewDidLoad() {
@@ -51,21 +51,35 @@ class HomeViewController: UIViewController , UIScrollViewDelegate  {
 
 extension HomeViewController : UITableViewDataSource , UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return images.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return cellSpacingHeight
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let playlistCell = tableView.dequeueReusableCell(withIdentifier: "playlistCell")
-        let contentview = playlistCell?.contentView
-        let imageView = contentview?.viewWithTag(1) as! UIImageView
-        let label = contentview?.viewWithTag(2) as! UILabel
+        let contentView = playlistCell?.contentView
+        let imageView = contentView?.viewWithTag(1) as! UIImageView
+        let label = contentView?.viewWithTag(2) as! UILabel
+        let buttonView = contentView?.viewWithTag(10)!
         
-        imageView.image = UIImage(named: "Lofi")
-        label.text = "Lofi playlist"
+        
+        imageView.image = UIImage(named: images[indexPath.section])
+        label.text = "Lofi playlist with cool music inside this lofi playlist"
+        
+        imageView.layer.cornerRadius = 20
+        buttonView?.layer.cornerRadius = 30
+        playlistCell?.layer.cornerRadius = 30
+        tableView.viewWithTag(10)?.layer.cornerRadius = 20
+        contentView?.frame.inset(by: UIEdgeInsets(top: 50, left: 30, bottom: 50, right: 30))
+        
+        
         
         return playlistCell!
     }

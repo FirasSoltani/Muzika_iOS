@@ -47,7 +47,7 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="playlistCell" rowHeight="206" id="H0n-2i-QcS">
                                         <rect key="frame" x="0.0" y="292" width="374" height="206"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="H0n-2i-QcS" id="CDS-Hp-fCU">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="H0n-2i-QcS" id="CDS-Hp-fCU">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="206"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -114,10 +114,9 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="labelColor"/>
                                                 </view>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" red="0.27058823529999998" green="0.2156862745" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                     </tableViewCell>
@@ -390,7 +389,7 @@
                                                 <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="labelColor"/>
+                                        <color key="backgroundColor" red="0.27058823529411763" green="0.21568627450980393" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="ptO-NA-e8q" firstAttribute="trailing" secondItem="eVF-ET-jT6" secondAttribute="trailing" id="6Yv-3E-Cb7"/>
                                             <constraint firstItem="O5u-OV-zkg" firstAttribute="top" secondItem="16r-km-gVE" secondAttribute="top" constant="1.7763568394002505e-15" id="8GT-3C-JwI"/>
@@ -431,7 +430,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="labelColor"/>
+                                        <color key="backgroundColor" red="0.27058823529411763" green="0.21568627450980393" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="490-Lc-r60" firstAttribute="top" secondItem="GbS-jd-0Ip" secondAttribute="topMargin" id="1ac-Ng-rES"/>
                                             <constraint firstItem="490-Lc-r60" firstAttribute="leading" secondItem="GbS-jd-0Ip" secondAttribute="leadingMargin" id="6eA-M5-NlZ"/>
@@ -445,9 +444,13 @@
                                             <constraint firstItem="490-Lc-r60" firstAttribute="trailing" secondItem="Kpf-xH-AWD" secondAttribute="trailing" id="lbx-tw-K8i"/>
                                         </constraints>
                                     </view>
-                                    <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CP7-Rq-btQ" userLabel="Favorites">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CP7-Rq-btQ" userLabel="Favorites">
                                         <rect key="frame" x="21" y="195" width="169" height="182"/>
                                         <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bookmark.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="XeQ-D8-cmV" userLabel="Favorites">
+                                                <rect key="frame" x="-1" y="1.9999999999999574" width="214" height="228.99999999999997"/>
+                                                <color key="tintColor" name="Gradient"/>
+                                            </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorites" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GwS-dD-2ia">
                                                 <rect key="frame" x="8" y="8" width="153" height="46"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -458,12 +461,8 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bookmark.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="XeQ-D8-cmV" userLabel="Favorites">
-                                                <rect key="frame" x="-1" y="1.9999999999999574" width="214" height="228.99999999999997"/>
-                                                <color key="tintColor" name="Gradient"/>
-                                            </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="labelColor"/>
+                                        <color key="backgroundColor" red="0.27058823529999998" green="0.2156862745" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="GwS-dD-2ia" firstAttribute="leading" secondItem="CP7-Rq-btQ" secondAttribute="leadingMargin" id="8uu-bv-7Qc"/>
                                             <constraint firstAttribute="bottom" secondItem="XeQ-D8-cmV" secondAttribute="bottom" constant="-49" id="EYc-ZN-UZy"/>
@@ -491,7 +490,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="labelColor"/>
+                                        <color key="backgroundColor" red="0.27058823529999998" green="0.2156862745" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="fNm-dv-vUq" firstAttribute="top" secondItem="SDZ-fw-ZAn" secondAttribute="top" constant="1.7763568394002505e-15" id="91r-Yh-aOe"/>
                                             <constraint firstItem="tbE-Sc-Hei" firstAttribute="top" secondItem="SDZ-fw-ZAn" secondAttribute="topMargin" id="L9Q-fb-FFV"/>

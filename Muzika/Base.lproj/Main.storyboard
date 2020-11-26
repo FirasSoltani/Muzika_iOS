@@ -89,7 +89,7 @@
                                                             <rect key="frame" x="8" y="19" width="125" height="125"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ghost Music" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJj-7m-0zI">
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJj-7m-0zI">
                                                             <rect key="frame" x="141" y="19" width="227" height="39"/>
                                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -372,6 +372,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="HZg-hH-Kbw" kind="relationship" relationship="viewControllers" id="ZOA-if-KLF"/>
+                        <segue destination="6qB-04-Jq8" kind="relationship" relationship="viewControllers" id="78F-E2-H5u"/>
                         <segue destination="W28-Kz-gvD" kind="relationship" relationship="viewControllers" id="2Tz-0d-WdF"/>
                         <segue destination="dDk-Op-Qpa" kind="relationship" relationship="viewControllers" id="9BA-Fm-znm"/>
                     </connections>
@@ -396,7 +397,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hzq-vL-2Ch">
                                 <rect key="frame" x="0.0" y="-59" width="390" height="370"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lofi" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xgN-vw-QN2">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xgN-vw-QN2">
                                         <rect key="frame" x="95" y="85" width="200" height="200"/>
                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                     </imageView>
@@ -447,7 +448,7 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="55 playlists" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVF-ET-jT6">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVF-ET-jT6">
                                                 <rect key="frame" x="8" y="48" width="153" height="31"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="31" id="PeJ-5s-ZxE"/>
@@ -542,14 +543,14 @@
                                             <constraint firstItem="GwS-dD-2ia" firstAttribute="trailing" secondItem="CP7-Rq-btQ" secondAttribute="trailingMargin" id="uWc-SW-XZh"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SDZ-fw-ZAn" userLabel="Logout">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SDZ-fw-ZAn" userLabel="Friends">
                                         <rect key="frame" x="208" y="195" width="169" height="182"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fNm-dv-vUq" userLabel="Favorites">
                                                 <rect key="frame" x="-1" y="2" width="214" height="229"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logout" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tbE-Sc-Hei">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friends" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tbE-Sc-Hei">
                                                 <rect key="frame" x="8" y="8" width="153" height="46"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="46" id="vXI-jf-JVo"/>
@@ -653,51 +654,95 @@
                         <outlet property="favorites" destination="CP7-Rq-btQ" id="z4X-If-sMN"/>
                         <outlet property="liked" destination="GbS-jd-0Ip" id="svD-Oz-kMO"/>
                         <outlet property="logout" destination="SDZ-fw-ZAn" id="r2h-Qa-Ccm"/>
+                        <outlet property="playlistCount" destination="eVF-ET-jT6" id="EEu-t9-dZb"/>
                         <outlet property="playlists" destination="16r-km-gVE" id="l0s-tK-xk5"/>
                         <outlet property="profileImage" destination="xgN-vw-QN2" id="GSo-JY-rtx"/>
+                        <outlet property="userNameLabel" destination="pje-JQ-7X2" id="vRZ-yk-lKs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FSv-AB-uWK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <view contentMode="scaleToFill" id="PVa-kK-B4Z">
-                    <rect key="frame" x="0.0" y="0.0" width="209" height="212"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mcm-32-ff0" userLabel="Playlists">
-                            <rect key="frame" x="20" y="22" width="169" height="134"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="169" id="kjK-sa-lok"/>
-                            </constraints>
-                            <imageReference key="image" image="play.fill" catalog="system" renderingMode="original"/>
-                        </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="My playlists" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gs3-AM-osv">
-                            <rect key="frame" x="20" y="166" width="169" height="26"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="26" id="oC0-lP-UQT"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
-                    <viewLayoutGuide key="safeArea" id="aPH-0h-nbc"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <constraints>
-                        <constraint firstItem="Mcm-32-ff0" firstAttribute="leading" secondItem="gs3-AM-osv" secondAttribute="leading" id="5cv-y2-UE8"/>
-                        <constraint firstItem="gs3-AM-osv" firstAttribute="top" secondItem="Mcm-32-ff0" secondAttribute="bottom" constant="8" id="CGY-Lr-9Rf"/>
-                        <constraint firstItem="Mcm-32-ff0" firstAttribute="trailing" secondItem="gs3-AM-osv" secondAttribute="trailing" id="PzK-IJ-Xc4"/>
-                    </constraints>
-                </view>
             </objects>
             <point key="canvasLocation" x="636.92307692307691" y="89.5734597156398"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="r54-rn-lvo">
+            <objects>
+                <viewController id="6qB-04-Jq8" customClass="SearchViewController" customModule="Muzika" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ccD-F5-KxV">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hd5-se-rBb">
+                                <rect key="frame" x="16" y="44" width="358" height="717"/>
+                                <color key="backgroundColor" name="Creme"/>
+                                <color key="separatorColor" name="Creme"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Look up a user" id="4ga-Ma-tJO">
+                                    <rect key="frame" x="0.0" y="0.0" width="358" height="56"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <color key="barTintColor" name="Creme"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="userCell" rowHeight="97" id="v3Z-cf-fWY">
+                                        <rect key="frame" x="0.0" y="84" width="358" height="97"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="v3Z-cf-fWY" id="Hat-Q2-3oZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="358" height="97"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fZi-u6-Gl1">
+                                                    <rect key="frame" x="20" y="-2" width="100" height="100"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Friend" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAL-2p-rPU">
+                                                    <rect key="frame" x="128" y="24" width="210" height="48"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="210" id="Lwg-4Y-uqE"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="sAL-2p-rPU" firstAttribute="trailing" secondItem="Hat-Q2-3oZ" secondAttribute="trailingMargin" id="17E-q4-Pkh"/>
+                                                <constraint firstItem="sAL-2p-rPU" firstAttribute="top" secondItem="Hat-Q2-3oZ" secondAttribute="topMargin" constant="13" id="IVc-cH-bel"/>
+                                                <constraint firstItem="fZi-u6-Gl1" firstAttribute="centerY" secondItem="sAL-2p-rPU" secondAttribute="centerY" id="Ipm-Zj-Y4k"/>
+                                                <constraint firstItem="fZi-u6-Gl1" firstAttribute="leading" secondItem="Hat-Q2-3oZ" secondAttribute="leadingMargin" id="bZH-r8-SOb"/>
+                                                <constraint firstItem="fZi-u6-Gl1" firstAttribute="top" secondItem="Hat-Q2-3oZ" secondAttribute="topMargin" constant="-13" id="gvy-3U-89I"/>
+                                                <constraint firstItem="fZi-u6-Gl1" firstAttribute="centerY" secondItem="Hat-Q2-3oZ" secondAttribute="centerY" id="piy-BF-MZa"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9PU-Mq-IMS"/>
+                        <color key="backgroundColor" name="Creme"/>
+                        <constraints>
+                            <constraint firstItem="hd5-se-rBb" firstAttribute="trailing" secondItem="ccD-F5-KxV" secondAttribute="trailingMargin" id="07e-Oo-C2A"/>
+                            <constraint firstItem="hd5-se-rBb" firstAttribute="bottom" secondItem="9PU-Mq-IMS" secondAttribute="bottom" id="4zf-hI-Rzn"/>
+                            <constraint firstItem="hd5-se-rBb" firstAttribute="top" secondItem="9PU-Mq-IMS" secondAttribute="top" id="VAL-a1-if1"/>
+                            <constraint firstItem="hd5-se-rBb" firstAttribute="leading" secondItem="ccD-F5-KxV" secondAttribute="leadingMargin" id="d2P-hz-CAC"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="C4H-Pz-vwU"/>
+                    <connections>
+                        <outlet property="searchBar" destination="4ga-Ma-tJO" id="8u0-rH-1a8"/>
+                        <outlet property="tableView" destination="hd5-se-rBb" id="JMg-A9-jpZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HZ8-5k-XOw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1329.2307692307693" y="659.71563981042652"/>
         </scene>
     </scenes>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="Crème avec Cassette Audio Musique Logo" width="500" height="500"/>
-        <image name="Lofi" width="1280" height="720"/>
         <image name="bookmark.fill" catalog="system" width="112" height="128"/>
         <image name="command" catalog="system" width="128" height="115"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="play.circle.fill" catalog="system" width="128" height="121"/>

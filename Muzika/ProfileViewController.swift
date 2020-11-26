@@ -11,12 +11,18 @@ import UIKit
 class ProfileViewController: UIViewController {
    
 
+    
+    private var accessToken: String = ""
+
     @IBOutlet weak var liked: UIView!
     @IBOutlet weak var logout: UIView!
     @IBOutlet weak var favorites: UIView!
     @IBOutlet weak var playlists: UIView!
     @IBOutlet weak var cardView: UIView!
-    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var profileImage:
+        UIImageView!
+    @IBOutlet weak var playlistCount: UILabel!
+    @IBOutlet weak var userNameLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
      
@@ -40,7 +46,67 @@ class ProfileViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+        
+    override func viewWillAppear(_ animated: Bool) {
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        accessToken = delegate.accessToken
+        getData(accessToken: accessToken)
+        //Finished
+    }
 }
+
+
+extension ProfileViewController {
+    func getData(accessToken: String) {
+        
+        let url = URL(string: "https://api.spotify.com/v1/me")
+        var User: user?
+        guard let requestUrl = url else { fatalError() }
+        // Create URL Request
+        var request = URLRequest(url: requestUrl)
+        // Specify HTTP Method to use
+        request.httpMethod = "GET"
+        request.addValue("Bearer "+accessToken, forHTTPHeaderField: "Authorization")
+        // Send HTTP Request
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            
+            // Check if Error took place
+            if let error = error {
+                print("Error took place \(error)")
+                return
+            }
+            if let data = data, let dataString = String(data: data, encoding: .utf8) {
+                DispatchQueue.main.async {
+                    print(dataString)
+                    User = try! JSONDecoder().decode(user.self, from: data)
+                                       //self.playlistCount.text = String(self.playlistsCount!) + " Playlists"
+                    self.setUser(currentUser: User!)
+                }
+            }
+            
+        }
+        task.resume()
+    }
+    
+    func setUser(currentUser: user) {
+        userNameLabel.text = currentUser.display_name
+        //Image synchronous loading
+        if(currentUser.images?.count != 0){
+        let url = URL(string: currentUser.images?[0].url ?? "")!
+        let data = try? Data(contentsOf: url)
+        profileImage.image = UIImage(data: data!)
+        }
+        else
+        {
+            if #available(iOS 13.0, *) {
+                profileImage.image = UIImage(systemName:   "person" )
+            }
+        }
+    }
+    
+}
+
+
+
 
 

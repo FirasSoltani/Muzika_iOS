@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		61300FF525666EAC00E9AE80 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61300FF425666EAC00E9AE80 /* ProfileViewController.swift */; };
 		61300FFA25666EF300E9AE80 /* FeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61300FF925666EF300E9AE80 /* FeaturedViewController.swift */; };
+		61418C40256D7579006B2698 /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61418C3F256D7579006B2698 /* SpotifyiOS.framework */; };
+		61418C66256EE0AE006B2698 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61418C65256EE0AE006B2698 /* Playlist.swift */; };
+		61418C6B256F01CF006B2698 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61418C6A256F01CF006B2698 /* User.swift */; };
+		61418C78256F1AAD006B2698 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61418C77256F1AAD006B2698 /* SearchViewController.swift */; };
 		61DF2F6D256554920071EFF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DF2F6C256554920071EFF2 /* AppDelegate.swift */; };
 		61DF2F6F256554920071EFF2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DF2F6E256554920071EFF2 /* HomeViewController.swift */; };
 		61DF2F72256554930071EFF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61DF2F70256554930071EFF2 /* Main.storyboard */; };
@@ -39,6 +43,12 @@
 /* Begin PBXFileReference section */
 		61300FF425666EAC00E9AE80 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		61300FF925666EF300E9AE80 /* FeaturedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedViewController.swift; sourceTree = "<group>"; };
+		61418C3F256D7579006B2698 /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyiOS.framework; path = ../../../../Desktop/SpotifyiOS.framework; sourceTree = "<group>"; };
+		61418C44256D77D5006B2698 /* Muzika-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Muzika-Bridging-Header.h"; sourceTree = "<group>"; };
+		61418C65256EE0AE006B2698 /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
+		61418C6A256F01CF006B2698 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		61418C73256F1664006B2698 /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyiOS.framework; sourceTree = "<group>"; };
+		61418C77256F1AAD006B2698 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		61DF2F69256554920071EFF2 /* Muzika.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Muzika.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61DF2F6C256554920071EFF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61DF2F6E256554920071EFF2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61418C40256D7579006B2698 /* SpotifyiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,9 +91,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		61418C6F256F162E006B2698 /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				61418C65256EE0AE006B2698 /* Playlist.swift */,
+				61418C6A256F01CF006B2698 /* User.swift */,
+			);
+			path = Structs;
+			sourceTree = "<group>";
+		};
 		61DF2F60256554920071EFF2 = {
 			isa = PBXGroup;
 			children = (
+				61418C44256D77D5006B2698 /* Muzika-Bridging-Header.h */,
+				61418C73256F1664006B2698 /* SpotifyiOS.framework */,
 				61DF2F6B256554920071EFF2 /* Muzika */,
 				61DF2F83256554940071EFF2 /* MuzikaTests */,
 				61DF2F8E256554940071EFF2 /* MuzikaUITests */,
@@ -103,8 +125,11 @@
 		61DF2F6B256554920071EFF2 /* Muzika */ = {
 			isa = PBXGroup;
 			children = (
+				61418C6F256F162E006B2698 /* Structs */,
+				61418C3F256D7579006B2698 /* SpotifyiOS.framework */,
 				61DF2F6C256554920071EFF2 /* AppDelegate.swift */,
 				61DF2F70256554930071EFF2 /* Main.storyboard */,
+				61418C77256F1AAD006B2698 /* SearchViewController.swift */,
 				61300FF925666EF300E9AE80 /* FeaturedViewController.swift */,
 				61DF2F6E256554920071EFF2 /* HomeViewController.swift */,
 				61300FF425666EAC00E9AE80 /* ProfileViewController.swift */,
@@ -270,9 +295,12 @@
 			files = (
 				61DF2F75256554930071EFF2 /* Muzika.xcdatamodeld in Sources */,
 				61DF2F6F256554920071EFF2 /* HomeViewController.swift in Sources */,
+				61418C78256F1AAD006B2698 /* SearchViewController.swift in Sources */,
 				61300FF525666EAC00E9AE80 /* ProfileViewController.swift in Sources */,
 				61300FFA25666EF300E9AE80 /* FeaturedViewController.swift in Sources */,
 				61DF2F6D256554920071EFF2 /* AppDelegate.swift in Sources */,
+				61418C66256EE0AE006B2698 /* Playlist.swift in Sources */,
+				61418C6B256F01CF006B2698 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,8 +411,10 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "Muzika-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -438,8 +468,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "Muzika-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -450,6 +482,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Muzika/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -467,6 +503,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Muzika/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

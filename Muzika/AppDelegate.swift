@@ -17,7 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPTAppRemoteDelegate, SPT
         accessToken = session.accessToken
         print(accessToken)
         print("Got access")
-         
         /*self.appRemote.connectionParameters.accessToken = session.accessToken
         self.appRemote.connect()*/
     }

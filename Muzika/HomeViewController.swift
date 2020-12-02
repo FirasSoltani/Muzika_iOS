@@ -78,9 +78,7 @@ extension HomeViewController : UITableViewDataSource , UITableViewDelegate {
         playlistCell?.layer.cornerRadius = 30
         tableView.viewWithTag(10)?.layer.cornerRadius = 20
         contentView?.frame.inset(by: UIEdgeInsets(top: 50, left: 30, bottom: 50, right: 30))
-        
-        
-        
+
         return playlistCell!
     }
 }

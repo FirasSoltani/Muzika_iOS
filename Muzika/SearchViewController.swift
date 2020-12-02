@@ -74,11 +74,8 @@ extension SearchViewController {
             if let data = data, let dataString = String(data: data, encoding: .utf8) {
                 DispatchQueue.main.async {
                     print(dataString)
-                   
                     let User = try! JSONDecoder().decode(id.self, from: data)
-                        
                     self.data = User.user ?? [infos]()
-                   
                 }
             }
             

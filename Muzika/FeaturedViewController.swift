@@ -19,7 +19,7 @@ class FeaturedViewController: UIViewController, UITableViewDelegate, UITableView
     private var accessToken: String = ""
     @IBOutlet weak var tableView: UITableView!
     let cellSpacingHeight: CGFloat = 5
-    var Playlist: playlistStructure?
+    var Playlist: Featured?
     var playlistCount: Int = 0
     func numberOfSections(in tableView: UITableView) -> Int {
         return playlistCount
@@ -45,14 +45,14 @@ class FeaturedViewController: UIViewController, UITableViewDelegate, UITableView
         let buttonView = contentView?.viewWithTag(10)!
         
         //Image synchronous loading
-        let url = URL(string: Playlist!.items[indexPath.section].images[0].url!)
+        let url = URL(string: Playlist!.playlists.items[indexPath.section].images[0].url!)
         let data = try? Data(contentsOf: url!)
         imageView.image = UIImage(data: data!)
         //Finished
         
         
-        label.text = Playlist!.items[indexPath.section].description
-        name.text = Playlist!.items[indexPath.section].name
+        label.text = Playlist!.playlists.items[indexPath.section].description
+        name.text = Playlist!.playlists.items[indexPath.section].name
         
         
         //Radius handling
@@ -67,6 +67,22 @@ class FeaturedViewController: UIViewController, UITableViewDelegate, UITableView
         return playlistCell!
     }
     
+    @IBAction func followClicked(_ sender: Any) {
+        var superview = (sender as AnyObject).superview
+            while let view = superview, !(view is UITableViewCell) {
+                superview = view?.superview
+            }
+            guard let cell = superview as? UITableViewCell else {
+                print("button is not contained in a table view cell")
+                return
+            }
+            guard let indexPath = tableView.indexPath(for: cell) else {
+                print("failed to get index path for cell containing button")
+                return
+            }
+            print("button is in row \(indexPath.section)")
+            print(follow(id: Playlist!.playlists.items[indexPath.section].id!))
+    }
     override func viewWillAppear(_ animated: Bool) {
         let delegate = UIApplication.shared.delegate as! AppDelegate
         accessToken = delegate.accessToken
@@ -84,10 +100,12 @@ class FeaturedViewController: UIViewController, UITableViewDelegate, UITableView
     
     
     
+}
+    extension FeaturedViewController {
     
     func getData(){
         
-        let url = URL(string: "https://api.spotify.com/v1/me/playlists")
+        let url = URL(string: "https://api.spotify.com/v1/browse/featured-playlists")
         guard let requestUrl = url else { fatalError() }
         // Create URL Request
         var request = URLRequest(url: requestUrl)
@@ -106,15 +124,41 @@ class FeaturedViewController: UIViewController, UITableViewDelegate, UITableView
                 
                 DispatchQueue.main.async {
                     print(dataString)
-                    self.Playlist = try! JSONDecoder().decode(playlistStructure.self, from: data)
-                    self.playlistCount = self.Playlist!.items.count
+                    self.Playlist = try! JSONDecoder().decode(Featured.self, from: data)
+                    self.playlistCount = self.Playlist!.playlists.items.count
                     self.tableView.reloadData() // this calls the table view data source methods again
                 }
             }
-            
         }
         task.resume()
     }
+        
+        func follow(id : String) -> Bool {
+            let url = URL(string: "https://api.spotify.com/v1/playlists/"+id+"/followers")
+            guard let requestUrl = url else { fatalError() }
+            // Create URL Request
+            var request = URLRequest(url: requestUrl)
+            var state = true;
+            // Specify HTTP Method to use
+            request.httpMethod = "PUT"
+            request.addValue("Bearer "+accessToken, forHTTPHeaderField: "Authorization")
+            request.addValue("application/json", forHTTPHeaderField: "Content-type")
+            
+            // Send HTTP Request
+            let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+                
+                // Check if Error took place
+                print(response)
+                if let error = error {
+                    print("Error took place \(error)")
+                    state = false
+                    return
+                }
+              
+            }
+            task.resume()
+            return state
+        }
     
 }
 

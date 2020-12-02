@@ -15,6 +15,7 @@
 		61418C78256F1AAD006B2698 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61418C77256F1AAD006B2698 /* SearchViewController.swift */; };
 		61C4F4B625779C30005DC622 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C4F4B525779C30005DC622 /* LoginViewController.swift */; };
 		61C4F4BB2577A696005DC622 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C4F4BA2577A696005DC622 /* Login.swift */; };
+		61C4F4CB2577DEB6005DC622 /* Featured.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C4F4CA2577DEB6005DC622 /* Featured.swift */; };
 		61DF2F6D256554920071EFF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DF2F6C256554920071EFF2 /* AppDelegate.swift */; };
 		61DF2F6F256554920071EFF2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DF2F6E256554920071EFF2 /* HomeViewController.swift */; };
 		61DF2F72256554930071EFF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61DF2F70256554930071EFF2 /* Main.storyboard */; };
@@ -53,6 +54,7 @@
 		61418C77256F1AAD006B2698 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		61C4F4B525779C30005DC622 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		61C4F4BA2577A696005DC622 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		61C4F4CA2577DEB6005DC622 /* Featured.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Featured.swift; sourceTree = "<group>"; };
 		61DF2F69256554920071EFF2 /* Muzika.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Muzika.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61DF2F6C256554920071EFF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61DF2F6E256554920071EFF2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				61418C65256EE0AE006B2698 /* Playlist.swift */,
 				61418C6A256F01CF006B2698 /* User.swift */,
 				61C4F4BA2577A696005DC622 /* Login.swift */,
+				61C4F4CA2577DEB6005DC622 /* Featured.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				61300FFA25666EF300E9AE80 /* FeaturedViewController.swift in Sources */,
 				61DF2F6D256554920071EFF2 /* AppDelegate.swift in Sources */,
 				61418C66256EE0AE006B2698 /* Playlist.swift in Sources */,
+				61C4F4CB2577DEB6005DC622 /* Featured.swift in Sources */,
 				61418C6B256F01CF006B2698 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

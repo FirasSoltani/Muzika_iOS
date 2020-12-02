@@ -20,7 +20,6 @@ class LoginViewController: UIViewController {
         loginButton.layer.cornerRadius = 15
       
         // Do any additional setup after loading the view.
-       
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,8 +40,9 @@ class LoginViewController: UIViewController {
     }
     */
     
-    
-    
+    }
+
+    extension LoginViewController{
     func getLogged(){
         
         let url = URL(string: "https://nameless-cliffs-25074.herokuapp.com/api/auth/signin")

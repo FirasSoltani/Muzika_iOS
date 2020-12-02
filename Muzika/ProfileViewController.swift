@@ -107,7 +107,7 @@ extension ProfileViewController {
         else
         {
             if #available(iOS 13.0, *) {
-                profileImage.image = UIImage(systemName:   "person" )
+                profileImage.image = UIImage(systemName:"person")
             }
         }
     }

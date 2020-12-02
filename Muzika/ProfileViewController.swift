@@ -53,6 +53,14 @@ class ProfileViewController: UIViewController {
         getData(accessToken: accessToken)
         //Finished
     }
+    @IBAction func logoutAction(_ sender: Any) {
+        UserDefaults.standard.setValue(false, forKey: "Logged")
+        let storyboard = UIStoryboard.init(name: "Main" , bundle: nil)
+            if #available(iOS 13.0, *) {
+                let vc : UIViewController = storyboard.instantiateViewController(identifier: "loginView")
+                UIApplication.shared.keyWindow?.rootViewController = vc
+            }
+    }
 }
 
 
@@ -79,7 +87,7 @@ extension ProfileViewController {
                 DispatchQueue.main.async {
                     print(dataString)
                     User = try! JSONDecoder().decode(user.self, from: data)
-                                       //self.playlistCount.text = String(self.playlistsCount!) + " Playlists"
+                    //self.playlistCount.text = String(self.playlistsCount!) + " Playlists"
                     self.setUser(currentUser: User!)
                 }
             }

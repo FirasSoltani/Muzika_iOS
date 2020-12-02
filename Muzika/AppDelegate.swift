@@ -16,10 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPTAppRemoteDelegate, SPT
     func sessionManager(manager: SPTSessionManager, didInitiate session: SPTSession) {
         accessToken = session.accessToken
         print(accessToken)
-        print("Got access")/*
-        self.appRemote.connectionParameters.accessToken = session.accessToken
+        print("Got access")
+         
+        /*self.appRemote.connectionParameters.accessToken = session.accessToken
         self.appRemote.connect()*/
     }
+    
+  
     
     func sessionManager(manager: SPTSessionManager, didFailWith error: Error) {
         print(error)
@@ -71,8 +74,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPTAppRemoteDelegate, SPT
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let storyboard = UIStoryboard.init(name: "Main" , bundle: nil)
+        print(UserDefaults.standard.bool(forKey: "Logged"))
+        if(!UserDefaults.standard.bool(forKey: "Logged") ){
+            if #available(iOS 13.0, *) {
+                let vc : UIViewController = storyboard.instantiateViewController(identifier: "loginView")
+                self.window?.rootViewController = vc
+            }
+        }else {
+            if #available(iOS 13.0, *) {
+                let vc : UIViewController = storyboard.instantiateViewController(identifier: "MainTabBar")
+                    as! UITabBarController
+                self.window?.rootViewController = vc
+        }
+        }
         let requestedScopes: SPTScope = [.appRemoteControl]
         self.sessionManager.initiateSession(with: requestedScopes, options: .default)
         
@@ -81,7 +97,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPTAppRemoteDelegate, SPT
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         self.sessionManager.application(app, open: url, options: options)
-        
         return true
     }
     

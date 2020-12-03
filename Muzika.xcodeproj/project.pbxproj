@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		46D031D42578564A000F2086 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D031D32578564A000F2086 /* MusicViewController.swift */; };
 		61300FF525666EAC00E9AE80 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61300FF425666EAC00E9AE80 /* ProfileViewController.swift */; };
 		61300FFA25666EF300E9AE80 /* FeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61300FF925666EF300E9AE80 /* FeaturedViewController.swift */; };
 		61418C40256D7579006B2698 /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61418C3F256D7579006B2698 /* SpotifyiOS.framework */; };
@@ -45,7 +44,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		46D031D32578564A000F2086 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		61300FF425666EAC00E9AE80 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		61300FF925666EF300E9AE80 /* FeaturedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedViewController.swift; sourceTree = "<group>"; };
 		61418C3F256D7579006B2698 /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyiOS.framework; path = ../../../../Desktop/SpotifyiOS.framework; sourceTree = "<group>"; };
@@ -144,7 +142,6 @@
 				61300FF925666EF300E9AE80 /* FeaturedViewController.swift */,
 				61DF2F6E256554920071EFF2 /* HomeViewController.swift */,
 				61300FF425666EAC00E9AE80 /* ProfileViewController.swift */,
-				46D031D32578564A000F2086 /* MusicViewController.swift */,
 				61DF2F76256554940071EFF2 /* Assets.xcassets */,
 				61DF2F78256554940071EFF2 /* LaunchScreen.storyboard */,
 				61DF2F7B256554940071EFF2 /* Info.plist */,
@@ -305,7 +302,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46D031D42578564A000F2086 /* MusicViewController.swift in Sources */,
 				61C4F4B625779C30005DC622 /* LoginViewController.swift in Sources */,
 				61C4F4BB2577A696005DC622 /* Login.swift in Sources */,
 				61DF2F75256554930071EFF2 /* Muzika.xcdatamodeld in Sources */,

@@ -30,16 +30,6 @@ class LoginViewController: UIViewController {
     @IBAction func loginClicked(_ sender: Any) {
         getLogged()
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
     }
 
     extension LoginViewController{
@@ -49,8 +39,6 @@ class LoginViewController: UIViewController {
         guard let requestUrl = url else { fatalError() }
         let username = view.viewWithTag(1) as! UITextField
         let password = view.viewWithTag(2) as! UITextField
-        print(username.text!)
-        print(password.text!)
         let params = ["username" : username.text  , "password" : password.text]
         // Create URL Request
         var request = URLRequest(url: requestUrl)
@@ -78,15 +66,15 @@ class LoginViewController: UIViewController {
                     let User: userLogin = try! JSONDecoder().decode(userLogin.self, from : data)
                     if(User.accessToken != nil){
                         print(User.username ??  "Nothing");
+                        print(User.id ?? "No id")
+                        UserDefaults.standard.setValue(User.id, forKey: "Id")
                         UserDefaults.standard.setValue(User.username, forKey: "Username")
                         UserDefaults.standard.setValue(User.email, forKey: "Email")
                         UserDefaults.standard.setValue(true, forKey: "Logged")
                         self.perform()
                     }
-                    
                 }
             }
-            
         }
         task.resume()
     }

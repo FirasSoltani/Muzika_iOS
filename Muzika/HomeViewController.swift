@@ -13,8 +13,6 @@ class HomeViewController: UIViewController , UIScrollViewDelegate  {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var pageControl: UIPageControl!
     
-    @IBOutlet weak var scrollView: UIScrollView!
-    
     @IBOutlet weak var tableHeight: NSLayoutConstraint!
     
     
@@ -30,17 +28,6 @@ class HomeViewController: UIViewController , UIScrollViewDelegate  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        scrollView.showsHorizontalScrollIndicator = false
-        scrollView.isPagingEnabled = true
-        for index in 0..<images.count {
-            frame.origin.x = scrollView.frame.size.width * CGFloat(index)
-            frame.size = scrollView.frame.size
-
-            let imageView = UIImageView(frame: frame)
-            imageView.image = UIImage(named: images[index])
-            self.scrollView.addSubview(imageView)
-        }
-       
         // Do any additional setup after loading the view, typically from a nib.
         
     }
@@ -81,6 +68,9 @@ extension HomeViewController : UITableViewDataSource , UITableViewDelegate {
 
         return playlistCell!
     }
+    
+    
+    
 }
 
 

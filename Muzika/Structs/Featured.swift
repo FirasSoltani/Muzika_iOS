@@ -20,11 +20,12 @@ struct itemStructure: Codable {
     let description: String?
     let images: [imageObject]
 }
+
 struct playlistsContainer: Codable{
     let items : [itemStructure]
 }
+
 struct Featured: Codable {
-    
     let href: String?
     let playlists: playlistsContainer
 }

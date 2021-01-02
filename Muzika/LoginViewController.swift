@@ -18,9 +18,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         background.layer.cornerRadius = 30
         loginButton.layer.cornerRadius = 15
-      
-        // Do any additional setup after loading the view.
-    }
+      }
     
     override func viewWillAppear(_ animated: Bool) {
         
@@ -31,7 +29,7 @@ class LoginViewController: UIViewController {
         getLogged()
     }
     }
-
+    
     extension LoginViewController{
     func getLogged(){
         
@@ -40,12 +38,11 @@ class LoginViewController: UIViewController {
         let username = view.viewWithTag(1) as! UITextField
         let password = view.viewWithTag(2) as! UITextField
         let params = ["username" : username.text  , "password" : password.text]
-        // Create URL Request
+        
         var request = URLRequest(url: requestUrl)
-        // Specify HTTP Method to use
+        
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "POST"
-        // Send HTTP Request
         
         do {
             request.httpBody = try JSONSerialization.data(withJSONObject: params)
@@ -78,7 +75,7 @@ class LoginViewController: UIViewController {
         }
         task.resume()
     }
-
+    
     func perform() {
         let storyboard = UIStoryboard(name: "Main" , bundle: nil)
         if #available(iOS 13.0, *) {

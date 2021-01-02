@@ -30,7 +30,6 @@ class PostViewController: UIViewController {
         let data = try? Data(contentsOf: url!)
         imageView.image = UIImage(data: data!)
         imageView.layer.cornerRadius = 20
-        // Do any additional setup after loading the view.
     }
     
     
@@ -45,7 +44,7 @@ class PostViewController: UIViewController {
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         let jsonData : [String:Any] = ["postContent" : self.textField?.text ?? ""]
         request.httpBody = try? JSONSerialization.data(withJSONObject: jsonData)
-        // Send HTTP Request
+        
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             
             // Check if Error took place

@@ -11,6 +11,7 @@ import UIKit
 @available(iOS 13.0, *)
 class FeaturedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
+    @IBOutlet var spinner: UIActivityIndicatorView!
     private var accessToken: String = ""
     @IBOutlet weak var tableView: UITableView!
     let cellSpacingHeight: CGFloat = 5
@@ -31,7 +32,6 @@ class FeaturedViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        //Object definition
         let playlistCell = tableView.dequeueReusableCell(withIdentifier: "playlistCell")
         let contentView = playlistCell?.contentView
         let imageView = contentView?.viewWithTag(1) as! UIImageView
@@ -45,12 +45,10 @@ class FeaturedViewController: UIViewController, UITableViewDelegate, UITableView
         imageView.image = UIImage(data: data!)
         //Finished
         
-        
         label.text = Playlist!.playlists.items[indexPath.section].description
         name.text = Playlist!.playlists.items[indexPath.section].name
         
         
-        //Radius handling
         imageView.layer.cornerRadius = 20
         buttonView?.layer.cornerRadius = 30
         playlistCell?.layer.cornerRadius = 30
@@ -61,7 +59,7 @@ class FeaturedViewController: UIViewController, UITableViewDelegate, UITableView
         
         return playlistCell!
     }
-   
+    
     
     @IBAction func followClicked(_ sender: Any) {
         var superview = (sender as AnyObject).superview
@@ -87,6 +85,7 @@ class FeaturedViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        spinner.startAnimating()
         tableView.delegate = self
         tableView.dataSource = self
         tableView.viewWithTag(10)?.layer.cornerRadius = 50
@@ -107,7 +106,7 @@ class FeaturedViewController: UIViewController, UITableViewDelegate, UITableView
             print("failed to get index path for cell containing button")
             return
         }
-       
+        
         if segue.identifier == "postSegue"
         {
             let vc = segue.destination as? PostViewController
@@ -123,17 +122,13 @@ class FeaturedViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
-    
     @IBAction func postAdd(_ sender: Any) {
-    performSegue(withIdentifier: "postSegue", sender: sender)
+        performSegue(withIdentifier: "postSegue", sender: sender)
     }
-    
 }
 @available(iOS 13.0, *)
 extension FeaturedViewController {
-    
     func getData(){
-        
         let url = URL(string: "https://api.spotify.com/v1/browse/featured-playlists")
         guard let requestUrl = url else { fatalError() }
         // Create URL Request
@@ -150,7 +145,6 @@ extension FeaturedViewController {
                 return
             }
             if let data = data, let dataString = String(data: data, encoding: .utf8) {
-                
                 DispatchQueue.main.async {
                     print(dataString)
                     self.Playlist = try! JSONDecoder().decode(Featured.self, from: data)
@@ -175,7 +169,6 @@ extension FeaturedViewController {
         
         // Send HTTP Request
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-            
             // Check if Error took place
             print(response ?? "No data")
             if let error = error {
@@ -183,11 +176,9 @@ extension FeaturedViewController {
                 state = false
                 return
             }
-            
         }
         task.resume()
         return state
     }
-    
 }
 
